@@ -29,7 +29,7 @@ import Summary from "../../custom/Summary/Summary.js";
 const Home = ({ section }) => {
   const [page, setPage] = useState(1);
 
-  const api = `https://newsapi.org/v2/top-headlines?country=in&category=${section.toLowerCase()}&pagSize=25&page=${page}&apiKey=bab0060b597e47a2a45b485f780621bd
+  const api = `https://newsapi.org/v2/everything?q=${section.toLowerCase()}&pagSize=25&page=${page}&apiKey=bab0060b597e47a2a45b485f780621bd
 `;
 
   console.log(api);
@@ -77,7 +77,7 @@ const Home = ({ section }) => {
             <Card
               url={item.urlToImage}
               title={item.title}
-              description={item.description}
+              description={item.content}
               link={item.url}
             />
           </>
