@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Home from "./components/Home/Home";
+import NavBar from "./components/NavBar/NavBar";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/Login/Login";
+import Logout from "./components/Logout/Logout";
 
-function App() {
+const App = () => {
+  const [section, setSection] = useState("World");
+
+  const [user, setUser] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <NavBar setSection={setSection} section={section} user={user} />
+        <Routes>
+          <Route path="/" element={<Home section={section} />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/logout" element={<Logout />} />
+        </Routes>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;
