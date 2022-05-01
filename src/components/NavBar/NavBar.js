@@ -16,8 +16,8 @@ const NavBar = ({ setSection, section, user }) => {
       <div className="nav-main fg-primary bg-primary">
         {/* Title */}
         <div className="nav-element">
-          <div className="title">TikZen</div>
-          {/* <div className="title-disc">TiKZen</div> */}
+          <div className="title">MON</div>
+          <div className="title-disc">MAD OVER NEWS</div>
         </div>
 
         {/* Navigation Bar Options */}
