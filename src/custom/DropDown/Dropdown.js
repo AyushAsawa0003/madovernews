@@ -3,21 +3,14 @@ import "./Dropdown.css";
 import { Link } from "react-router-dom";
 
 const items = [
-  "Trending",
-  "All News",
-  "Latest",
-  "India",
-  "World",
   "Business",
   "Sports",
   "Politics",
   "Technology",
-  "Startups",
   "Entertainment",
   "Science",
-  "Automobile",
-  "IPL",
-  "Soccer",
+  "General",
+  "Health",
 ];
 
 const Dropdown = ({ setSection, setShowCategory }) => {
